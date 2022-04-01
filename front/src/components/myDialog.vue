@@ -27,11 +27,17 @@ export default {
   },
 
   methods: {
+    // submit() {
+    //   this.$emit('submit')
+    // },
+    // closeDialog() {
+    //   this.$emit('closeDialog')
+    // }
     submit() {
-      this.$emit('submit')
+      this.$emit('update:showDown', false)
     },
     closeDialog() {
-      this.$emit('closeDialog')
+      this.$emit('update:showDown', false)
     }
   }
 }

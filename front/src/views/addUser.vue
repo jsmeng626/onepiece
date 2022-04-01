@@ -32,7 +32,7 @@
         </MyTable>
         <Pagination @changePageNum="changePageNum"></Pagination>
         <MyDialog
-          :showDown="showDown"
+          :showDown.sync="showDown"
           @closeDialog="closeDialog"
           @submit="submit"
         >
