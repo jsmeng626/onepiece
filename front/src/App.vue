@@ -1,7 +1,9 @@
 <template>
   <div>
     <!-- 这里使用keep-alive会影响我home页created中计算侧边栏显示状态 -->
-    <router-view></router-view>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
   </div>
 </template>
 
@@ -15,5 +17,4 @@ export default {
 }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

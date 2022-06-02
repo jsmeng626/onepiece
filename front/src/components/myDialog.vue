@@ -57,7 +57,7 @@ export default {
   font-size: (16 / @w);
   .dialog {
     position: absolute;
-    // width: (700 / @w);
+    width: (700 / @w);
     padding: (80 / @w) (120 / @w);
     top: 50%;
     left: 50%;

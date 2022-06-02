@@ -5,9 +5,16 @@ import store from './store'
 import MyToastr from './components/myToastr.vue'
 import axios from 'axios'
 import './assets/fonts/iconfont.css'
-import './assets/element.js'
+// import './assets/element.js'
 
-axios.defaults.baseURL = 'http://192.168.90.93:3000'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
+
+import { VueJsonp } from 'vue-jsonp'
+Vue.use(VueJsonp)
+
+axios.defaults.baseURL = 'http://192.168.12.28:3000'
 
 Vue.prototype.$axios = axios
 Vue.component('MyToastr', MyToastr)

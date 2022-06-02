@@ -7,6 +7,7 @@ Vue.use(VueRouter)
 const routes = [
   { path: '/', redirect: '/login' },
   { path: '/login', component: () => import('../views/login.vue') },
+  { path: '/map', component: () => import('../views/map.vue') },
   {
     path: '/home',
     component: () => import('../views/home.vue'),
@@ -33,14 +34,14 @@ const router = new VueRouter({
   mode: 'history'
 })
 
-router.beforeEach((to, from, next) => {
-  const token = window.localStorage.getItem('token')
-  const whiteList = ['/login']
-  if (!token && !whiteList.includes(to.path)) {
-    Vue.prototype.$message.error('您还没登录哦')
-    return next('/login')
-  }
-  next()
-})
+// router.beforeEach((to, from, next) => {
+//   const token = window.localStorage.getItem('token')
+//   const whiteList = ['/login']
+//   if (!token && !whiteList.includes(to.path)) {
+//     Vue.prototype.$message.error('您还没登录哦')
+//     return next('/login')
+//   }
+//   next()
+// })
 
 export default router

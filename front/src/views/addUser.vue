@@ -102,7 +102,14 @@ export default {
     }
   },
   created() {
+    console.log('created')
     this.query()
+  },
+  activated() {
+    console.log('activated被激活了')
+  },
+  deactivated() {
+    console.log('失活了')
   },
   methods: {
     // 查询
