@@ -1,7 +1,8 @@
 <template>
   <div>
-    <div class="main">
-      <div class="aside" :style="{ height }">
+    <div class="home-main">
+      <!-- 引入antd自己的样式报错 -->
+      <!-- <div class="home-aside" :style="{ height }">
         <h1>One Piece</h1>
         <div class="input">
           <input type="text" placeholder="搜索海米" />
@@ -26,8 +27,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="content">
+      </div> -->
+      <div class="home-content">
         <div class="nav">
           <button @click="exit">退出</button>
         </div>
@@ -109,7 +110,7 @@ export default {
           children: [
             {
               id: 1,
-              title: '全部社区',
+              title: '用户管理(antd)',
               path: '/home/community',
               iconfont: 'iconfont icon-wangluo'
             },
@@ -214,10 +215,10 @@ export default {
 
 <style lang="less" scoped>
 @w: 19.2vw;
-.main {
+.home-main {
   display: flex;
   font-size: (16 / @w);
-  .aside {
+  .home-aside {
     width: (350 / @w);
     background-color: #2c2f3f;
     h1 {
@@ -306,7 +307,7 @@ export default {
       }
     }
   }
-  .content {
+  .home-content {
     flex: 1;
     .nav {
       position: relative;

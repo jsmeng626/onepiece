@@ -9,6 +9,14 @@ module.exports = {
         libraryName: 'element-ui',
         styleLibraryName: 'theme-chalk'
       }
+    ],
+    [
+      "import",
+      {
+        libraryName: "Antd",
+        libraryDirectory: "es",
+        style: 'css'
+      }
     ]
   ]
 }

@@ -11,7 +11,7 @@ const routes = [
   {
     path: '/home',
     component: () => import('../views/home.vue'),
-    redirect: '/home/addUser',
+    redirect: '/home/community',
     children: [
       { path: 'addUser', component: () => import('../views/addUser.vue') },
       { path: 'author', component: () => import('../views/author.vue') },
