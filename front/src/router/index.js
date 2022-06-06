@@ -11,7 +11,7 @@ const routes = [
   {
     path: '/home',
     component: () => import('../views/home.vue'),
-    redirect: '/home/community',
+    redirect: '/home/import',
     children: [
       { path: 'addUser', component: () => import('../views/addUser.vue') },
       { path: 'author', component: () => import('../views/author.vue') },
@@ -23,7 +23,8 @@ const routes = [
       { path: 'community', component: () => import('../views/community.vue') },
       { path: 'information', component: () => import('../views/information.vue') },
       { path: 'myUnity', component: () => import('../views/myUnity.vue') },
-      { path: 'systemConfig', component: () => import('../views/systemConfig.vue') }
+      { path: 'systemConfig', component: () => import('../views/systemConfig.vue') },
+      { path: 'import', component: () => import('../views/import.vue') }
     ]
   },
   { path: '*', component: () => import('../views/404.vue') }
